@@ -22,6 +22,7 @@
         <module>simple-springboot-comsumer</module>
         <module>simple-springboot-api</module>
         <module>simple-springboot-production</module>
+        <module>simple-springboot-solr</module>
     </modules>
 
 
@@ -44,6 +45,18 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
